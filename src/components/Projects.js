@@ -2,7 +2,7 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+// import projImg3 from "../assets/img/project-img3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -11,17 +11,21 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Click To View ",
+      description: "Project 1",
       imgUrl: projImg1,
+      link:"https://www.facebook.com/pxynnhipxynnhi"
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Click To View",
+      description: "Project 2",
       imgUrl: projImg2,
+      link:"https://www.facebook.com/pxynnhipxynnhi"
     }
   ];
-
+  const customRowStyle = {
+    justifyContent: "center", 
+  };
   return (
     <section className="project" id="projects">
       <Container>
@@ -46,7 +50,7 @@ export const Projects = () => {
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
-                      <Row>
+                      <Row style={customRowStyle}>
                         {
                           projects.map((project, index) => {
                             return (
